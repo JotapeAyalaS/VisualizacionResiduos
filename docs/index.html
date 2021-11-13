@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación de Residuos por Región - Chile</title>
+
+    <!-- Librería CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Librería CSS Mapbox -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--
+            Desplegar Mapa y cuadros informativos en mapa.
+        -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-2"><div class="p-3 mb-2 bg-primary text-white">Mapa de Generación de Residuos Sólidos Domiciliarios - Chile - 2019</div></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Elegir Región</option>
+                        <option value="1">Arica y Parinacota</option>
+                        <option value="2">Tarapacá</option>
+                        <option value="3">Antofagasta</option>
+                        <option value="5">Atacama</option>
+                        <option value="6">Coquimbo</option>
+                        <option value="7">Valparaíso</option>
+                        <option value="8">Metropolitana</option>
+                        <option value="9">O'Higgins</option>
+                        <option value="10">Maule</option>
+                        <option value="11">Ñuble</option>
+                        <option value="12">Biobío</option>
+                        <option value="13">Araucanía</option>
+                        <option value="14">Los Ríos</option>
+                        <option value="15">Los Lagos</option>
+                        <option value="16">Aysén</option>
+                        <option value="17">Magallanes</option>
+                      </select>
+                </div>
+                <div class="col">
+                    <div id="MapaRegion" style="width: 100%; height: 450px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                Página elaborada por Juan Pablo Ayala Santander<br>
+                A pártir de información obtenida en el Registro de Emisiones y Transferencia de Contaminantes (RETC)<br>
+                Más información en <a href="https://retc.mma.gob.cl/disposicion-a-suelo/">https://retc.mma.gob.cl/disposicion-a-suelo/</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Librería JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Librería JS Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-locale-es-latest.js"></script>
+    
+    <!-- Librería JS Mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+
+    <!-- Librería propia para información en Mapa -->
+    <script src="js/map.js"></script>
+</body>
+
+</html>
